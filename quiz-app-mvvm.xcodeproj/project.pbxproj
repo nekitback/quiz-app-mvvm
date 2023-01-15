@@ -11,6 +11,7 @@
 		88000D342969555F00CA35EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000D332969555F00CA35EB /* ViewController.swift */; };
 		88000D392969556000CA35EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88000D382969556000CA35EB /* Assets.xcassets */; };
 		88000D3C2969556000CA35EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88000D3A2969556000CA35EB /* LaunchScreen.storyboard */; };
+		8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8830385D2974030B00FFC6A5 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +103,9 @@
 			dependencies = (
 			);
 			name = "quiz-app-mvvm";
+			packageProductDependencies = (
+				8830385D2974030B00FFC6A5 /* SnapKit */,
+			);
 			productName = "quiz-app-mvvm";
 			productReference = 88000D2C2969555F00CA35EB /* quiz-app-mvvm.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 88000D232969555F00CA35EB;
+			packageReferences = (
+				8830385C2974030B00FFC6A5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 88000D2D2969555F00CA35EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8830385C2974030B00FFC6A5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8830385D2974030B00FFC6A5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8830385C2974030B00FFC6A5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88000D242969555F00CA35EB /* Project object */;
 }
