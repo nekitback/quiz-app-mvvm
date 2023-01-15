@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = ViewController()
+        window?.rootViewController = ModuleBuilder.assemblyAuthViewController()
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         

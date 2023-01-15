@@ -8,19 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		88000D302969555F00CA35EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000D2F2969555F00CA35EB /* AppDelegate.swift */; };
-		88000D342969555F00CA35EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000D332969555F00CA35EB /* ViewController.swift */; };
+		88000D342969555F00CA35EB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88000D332969555F00CA35EB /* AuthViewController.swift */; };
 		88000D392969556000CA35EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88000D382969556000CA35EB /* Assets.xcassets */; };
 		88000D3C2969556000CA35EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88000D3A2969556000CA35EB /* LaunchScreen.storyboard */; };
 		8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8830385D2974030B00FFC6A5 /* SnapKit */; };
+		88FF06BB29740529005608A2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06BA29740529005608A2 /* AuthViewModel.swift */; };
+		88FF06BF2974057C005608A2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06BE2974057C005608A2 /* Bindable.swift */; };
+		88FF06C3297405E7005608A2 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06C2297405E7005608A2 /* AuthType.swift */; };
+		88FF06C529740AC1005608A2 /* AuthViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06C429740AC1005608A2 /* AuthViewConstants.swift */; };
+		88FF06C829740B6E005608A2 /* ModuleTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06C729740B6E005608A2 /* ModuleTitles.swift */; };
+		88FF06CB29740EFD005608A2 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06CA29740EFD005608A2 /* ModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88000D2C2969555F00CA35EB /* quiz-app-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quiz-app-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88000D2F2969555F00CA35EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88000D332969555F00CA35EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88000D332969555F00CA35EB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		88000D382969556000CA35EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88000D3B2969556000CA35EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88000D3D2969556000CA35EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FF06BA29740529005608A2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		88FF06BE2974057C005608A2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		88FF06C2297405E7005608A2 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
+		88FF06C429740AC1005608A2 /* AuthViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewConstants.swift; sourceTree = "<group>"; };
+		88FF06C729740B6E005608A2 /* ModuleTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTitles.swift; sourceTree = "<group>"; };
+		88FF06CA29740EFD005608A2 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 		88000D2E2969555F00CA35EB /* quiz-app-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				88FF06C929740ECF005608A2 /* ModuleBuilder */,
+				88FF06BC29740559005608A2 /* Utilities */,
 				88000D43296970B000CA35EB /* App */,
 				88000D44296970CB00CA35EB /* Controllers */,
 				88000D452969717500CA35EB /* Resources */,
@@ -72,7 +86,7 @@
 		88000D44296970CB00CA35EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				88000D332969555F00CA35EB /* ViewController.swift */,
+				88FF06B6297404A7005608A2 /* AuthViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -85,6 +99,90 @@
 				88000D3D2969556000CA35EB /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		88FF06B6297404A7005608A2 /* AuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06B7297404BE005608A2 /* View */,
+				88FF06B8297404CA005608A2 /* ViewModel */,
+				88FF06B9297404EC005608A2 /* Constants */,
+			);
+			path = AuthViewController;
+			sourceTree = "<group>";
+		};
+		88FF06B7297404BE005608A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88000D332969555F00CA35EB /* AuthViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88FF06B8297404CA005608A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06BA29740529005608A2 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88FF06B9297404EC005608A2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06C429740AC1005608A2 /* AuthViewConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		88FF06BC29740559005608A2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06C629740B2A005608A2 /* ModuleTitles */,
+				88FF06C0297405CD005608A2 /* DataModels */,
+				88FF06BD29740567005608A2 /* Bindable */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		88FF06BD29740567005608A2 /* Bindable */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06BE2974057C005608A2 /* Bindable.swift */,
+			);
+			path = Bindable;
+			sourceTree = "<group>";
+		};
+		88FF06C0297405CD005608A2 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06C1297405DB005608A2 /* AuthType */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		88FF06C1297405DB005608A2 /* AuthType */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06C2297405E7005608A2 /* AuthType.swift */,
+			);
+			path = AuthType;
+			sourceTree = "<group>";
+		};
+		88FF06C629740B2A005608A2 /* ModuleTitles */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06C729740B6E005608A2 /* ModuleTitles.swift */,
+			);
+			path = ModuleTitles;
+			sourceTree = "<group>";
+		};
+		88FF06C929740ECF005608A2 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				88FF06CA29740EFD005608A2 /* ModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +261,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88000D342969555F00CA35EB /* ViewController.swift in Sources */,
+				88FF06C529740AC1005608A2 /* AuthViewConstants.swift in Sources */,
+				88FF06C3297405E7005608A2 /* AuthType.swift in Sources */,
+				88000D342969555F00CA35EB /* AuthViewController.swift in Sources */,
+				88FF06CB29740EFD005608A2 /* ModuleBuilder.swift in Sources */,
+				88FF06C829740B6E005608A2 /* ModuleTitles.swift in Sources */,
 				88000D302969555F00CA35EB /* AppDelegate.swift in Sources */,
+				88FF06BF2974057C005608A2 /* Bindable.swift in Sources */,
+				88FF06BB29740529005608A2 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
