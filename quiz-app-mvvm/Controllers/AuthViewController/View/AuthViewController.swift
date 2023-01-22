@@ -3,7 +3,7 @@ import SnapKit
 
 final class AuthViewController: UIViewController {
     
-    internal var viewModel: AuthViewModel?
+    var viewModel: AuthViewModel?
     
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: AuthViewConstants.backgroundImage)
@@ -79,6 +79,10 @@ final class AuthViewController: UIViewController {
         setupViews()
         setupConstraints()
         bind()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }
@@ -167,12 +171,51 @@ extension AuthViewController {
             $0.left.right.equalToSuperview().inset(50)
         }
     }
+    private func showMainScreen() {
+        let mainViewController = MainViewController()
+        UIView.transition(with: UIWindow.key, duration: 0.7, options: .curveEaseIn) {
+            UIWindow.key.rootViewController = mainViewController
+        }
+    }
 }
 
 extension AuthViewController {
     @objc
     private func entryButtonTapped() {
-        
+        if viewModel?.authType.value == .login {
+            viewModel?.authManager.value.authorizeToFirebase(email: "\(emailTextField.text ?? "")", password: "\(passwordTextField.text ?? "")") { email, error in
+                if self.emailTextField.text == email {
+                    self.showMainScreen()
+                }
+                if let error = error {
+                    let alertController = UIAlertController(title: "", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                    alertController.addAction(alertAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    return
+                }
+            }
+        }
+        if viewModel?.authType.value == .registration {
+            viewModel?.authManager.value.registrationToFirebase(email: "\(emailTextField.text ?? "")", password: "\(passwordTextField.text ?? "")") { result, error in
+                if result != nil {
+                    let alertController = UIAlertController(title: "", message: "Registration successful", preferredStyle: .alert)
+                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                    alertController.addAction(alertAction)
+                    self.present(alertController, animated: true) {
+                        self.entryTypeButtonTapped()
+                    }
+                }
+                if let error = error {
+                    print(error.localizedDescription)
+                    let alertController = UIAlertController(title: "", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                    alertController.addAction(alertAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    return
+                }
+            }
+        }
     }
     
     @objc
@@ -182,7 +225,6 @@ extension AuthViewController {
         } else {
             viewModel?.authType.value = .registration
         }
-        
     }
 }
 
