@@ -5,7 +5,7 @@ final class Bindable<T> {
     typealias Listener = (T) -> Void
     private var listener: Listener?
     
-    internal var value: T {
+    var value: T {
         didSet {
             listener?(value)
         }

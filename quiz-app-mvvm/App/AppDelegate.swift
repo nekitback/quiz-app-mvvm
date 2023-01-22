@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,6 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        configureFirebase()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         window?.rootViewController = ModuleBuilder.assemblyAuthViewController()
@@ -14,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         
         return true
+    }
+    
+    func configureFirebase() {
+        FirebaseApp.configure()
     }
 
 }
