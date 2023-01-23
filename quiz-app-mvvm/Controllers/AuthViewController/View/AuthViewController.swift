@@ -171,50 +171,16 @@ extension AuthViewController {
             $0.left.right.equalToSuperview().inset(50)
         }
     }
-    private func showMainScreen() {
-        let mainViewController = MainViewController()
-        UIView.transition(with: UIWindow.key, duration: 0.7, options: .curveEaseIn) {
-            UIWindow.key.rootViewController = mainViewController
-        }
-    }
 }
 
 extension AuthViewController {
     @objc
     private func entryButtonTapped() {
         if viewModel?.authType.value == .login {
-            viewModel?.authManager.value.authorizeToFirebase(email: "\(emailTextField.text ?? "")", password: "\(passwordTextField.text ?? "")") { email, error in
-                if self.emailTextField.text == email {
-                    self.showMainScreen()
-                }
-                if let error = error {
-                    let alertController = UIAlertController(title: "", message: "\(error.localizedDescription)", preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
-                    alertController.addAction(alertAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    return
-                }
-            }
+            authorization()
         }
         if viewModel?.authType.value == .registration {
-            viewModel?.authManager.value.registrationToFirebase(email: "\(emailTextField.text ?? "")", password: "\(passwordTextField.text ?? "")") { result, error in
-                if result != nil {
-                    let alertController = UIAlertController(title: "", message: "Registration successful", preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
-                    alertController.addAction(alertAction)
-                    self.present(alertController, animated: true) {
-                        self.entryTypeButtonTapped()
-                    }
-                }
-                if let error = error {
-                    print(error.localizedDescription)
-                    let alertController = UIAlertController(title: "", message: "\(error.localizedDescription)", preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
-                    alertController.addAction(alertAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    return
-                }
-            }
+            registration()
         }
     }
     
@@ -228,3 +194,60 @@ extension AuthViewController {
     }
 }
 
+extension AuthViewController {
+    private func showMainScreen() {
+        let mainViewController = MainViewController()
+        UIView.transition(with: UIWindow.key, duration: 0.7, options: .curveEaseIn) {
+            UIWindow.key.rootViewController = mainViewController
+        }
+    }
+    
+    private func authorization() {
+        viewModel?.authManager.value.authorizeToFirebase(email: "\(emailTextField.text ?? "")", password: "\(passwordTextField.text ?? "")") { email, error in
+            if self.emailTextField.text == email {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.showMainScreen()
+                }
+            }
+            if let error = error {
+                let alertController = UIAlertController(title: "", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                alertController.addAction(alertAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }
+    }
+    
+    private func registration() {
+        viewModel?.databaseManager.value.nicknameUsed(nickname: "\(nicknameTextfield.text ?? "")") { exists in
+            if exists > 0 {
+                self.nicknameTextfield.text = ""
+                self.nicknameTextfield.placeholder = "этот никнейм уже занят"
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.nicknameTextfield.placeholder = "nickname"
+                }
+            }
+            if exists == 0 {
+                self.viewModel?.authManager.value.registrationToFirebase(email: "\(self.emailTextField.text ?? "")", password: "\(self.passwordTextField.text ?? "")") { result, error in
+                    if result != nil {
+                        let alertController = UIAlertController(title: "", message: "Registration successful", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                        alertController.addAction(alertAction)
+                        self.present(alertController, animated: true) {
+                            self.entryTypeButtonTapped()
+                        }
+                    }
+                    if let error = error {
+                        print(error.localizedDescription)
+                        let alertController = UIAlertController(title: "", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                        alertController.addAction(alertAction)
+                        self.present(alertController, animated: true, completion: nil)
+                        return
+                    }
+                }
+            }
+        }
+    }
+}
