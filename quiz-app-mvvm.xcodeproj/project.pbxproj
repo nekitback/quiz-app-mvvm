@@ -12,6 +12,9 @@
 		88000D392969556000CA35EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88000D382969556000CA35EB /* Assets.xcassets */; };
 		88000D3C2969556000CA35EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88000D3A2969556000CA35EB /* LaunchScreen.storyboard */; };
 		8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8830385D2974030B00FFC6A5 /* SnapKit */; };
+		886A0C22297D5C23000EEDE9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A0C21297D5C23000EEDE9 /* DatabaseManager.swift */; };
+		886A0C25297D5F30000EEDE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A0C24297D5F30000EEDE9 /* User.swift */; };
+		886A0C27297D62D1000EEDE9 /* DataSnapshot+data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A0C26297D62D1000EEDE9 /* DataSnapshot+data.swift */; };
 		887547822977F34700B1CEA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 887547812977F34700B1CEA6 /* GoogleService-Info.plist */; };
 		887547852977F4C000B1CEA6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 887547842977F4C000B1CEA6 /* FirebaseAnalytics */; };
 		887547872977F4C000B1CEA6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 887547862977F4C000B1CEA6 /* FirebaseAnalyticsSwift */; };
@@ -39,6 +42,9 @@
 		88000D382969556000CA35EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88000D3B2969556000CA35EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88000D3D2969556000CA35EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		886A0C21297D5C23000EEDE9 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		886A0C24297D5F30000EEDE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		886A0C26297D62D1000EEDE9 /* DataSnapshot+data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSnapshot+data.swift"; sourceTree = "<group>"; };
 		887547812977F34700B1CEA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		887547952977F8F900B1CEA6 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		888A415E297D277200579E36 /* UIWindow+key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+key.swift"; sourceTree = "<group>"; };
@@ -129,10 +135,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		886A0C23297D5F23000EEDE9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				886A0C24297D5F30000EEDE9 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		887547942977F8D900B1CEA6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				887547952977F8F900B1CEA6 /* AuthManager.swift */,
+				886A0C21297D5C23000EEDE9 /* DatabaseManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -141,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				888A415E297D277200579E36 /* UIWindow+key.swift */,
+				886A0C26297D62D1000EEDE9 /* DataSnapshot+data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				88FF06C1297405DB005608A2 /* AuthType */,
+				886A0C23297D5F23000EEDE9 /* User */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -347,14 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886A0C25297D5F30000EEDE9 /* User.swift in Sources */,
 				888A415F297D277200579E36 /* UIWindow+key.swift in Sources */,
 				88FF06C529740AC1005608A2 /* AuthViewConstants.swift in Sources */,
+				886A0C27297D62D1000EEDE9 /* DataSnapshot+data.swift in Sources */,
 				88FF06C3297405E7005608A2 /* AuthType.swift in Sources */,
 				88000D342969555F00CA35EB /* AuthViewController.swift in Sources */,
 				88FF06CB29740EFD005608A2 /* ModuleBuilder.swift in Sources */,
 				88FF06C829740B6E005608A2 /* ModuleTitles.swift in Sources */,
 				88000D302969555F00CA35EB /* AppDelegate.swift in Sources */,
 				88FF06D129741A8C005608A2 /* MainViewController.swift in Sources */,
+				886A0C22297D5C23000EEDE9 /* DatabaseManager.swift in Sources */,
 				88FF06BF2974057C005608A2 /* Bindable.swift in Sources */,
 				88FF06BB29740529005608A2 /* AuthViewModel.swift in Sources */,
 				887547962977F8F900B1CEA6 /* AuthManager.swift in Sources */,
