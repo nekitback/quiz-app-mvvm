@@ -205,8 +205,12 @@ extension AuthViewController {
     private func authorization() {
         viewModel?.authManager.value.authorizeToFirebase(email: "\(emailTextField.text ?? "")", password: "\(passwordTextField.text ?? "")") { email, error in
             if self.emailTextField.text == email {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    self.showMainScreen()
+                self.viewModel?.databaseManager.value.fetchNickname(email: "\(self.emailTextField.text ?? "")") { nickname in
+                    self.viewModel?.session.value.userNickname = nickname
+                }
+                self.viewModel?.session.value.userEmail = email ?? ""
+                self.viewModel?.databaseManager.value.fetchPoints(email: "\(self.emailTextField.text ?? "")") { points in
+                    self.viewModel?.session.value.userPoints = points
                 }
             }
             if let error = error {
@@ -215,6 +219,9 @@ extension AuthViewController {
                 alertController.addAction(alertAction)
                 self.present(alertController, animated: true, completion: nil)
                 return
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.showMainScreen()
             }
         }
     }
@@ -231,6 +238,7 @@ extension AuthViewController {
             if exists == 0 {
                 self.viewModel?.authManager.value.registrationToFirebase(email: "\(self.emailTextField.text ?? "")", password: "\(self.passwordTextField.text ?? "")") { result, error in
                     if result != nil {
+                        self.viewModel?.databaseManager.value.insertUser(with: QuizAppUser(uid: String(result?.user.uid ?? ""), email: self.emailTextField.text ?? "", nickname: self.nicknameTextfield.text ?? "", points: 0))
                         let alertController = UIAlertController(title: "", message: "Registration successful", preferredStyle: .alert)
                         let alertAction = UIAlertAction(title: "Ok", style: .cancel)
                         alertController.addAction(alertAction)
