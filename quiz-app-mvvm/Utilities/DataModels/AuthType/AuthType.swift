@@ -1,6 +1,6 @@
 import Foundation
 
-enum AuthType: Int {
+enum AuthType {
     case login
     case registration
 }

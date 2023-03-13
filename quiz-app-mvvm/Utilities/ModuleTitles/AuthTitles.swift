@@ -1,6 +1,6 @@
 import Foundation
 
-enum ModuleTitles {
+enum AuthTitles {
     case authTitle
     case registrationTitle
     case authEntryTypeButtonTitle
@@ -24,7 +24,7 @@ enum ModuleTitles {
         }
     }
     
-    static func getModuleTitle(_ moduleTitle: ModuleTitles) -> String? {
+    static func getModuleTitle(_ moduleTitle: AuthTitles) -> String? {
         return moduleTitle.title
     }
 }

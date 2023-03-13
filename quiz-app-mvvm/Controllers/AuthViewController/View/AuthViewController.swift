@@ -60,7 +60,6 @@ final class AuthViewController: UIViewController {
         button.layer.cornerRadius = AuthViewConstants.buttonCornerRadius
         button.setTitleShadowColor(.black, for: .normal)
         button.addTarget(self, action: #selector(entryButtonTapped), for: .touchUpInside)
-        
         return button
     }()
     
@@ -69,7 +68,6 @@ final class AuthViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(entryTypeButtonTapped), for: .touchUpInside)
-        
         return button
     }()
     
@@ -97,9 +95,9 @@ extension AuthViewController {
     private func updateType(depends authType: AuthType?) {
         switch authType {
         case .login:
-            loginLabel.text = ModuleTitles.getModuleTitle(.authTitle)
-            entryTypeButton.setTitle(ModuleTitles.getModuleTitle(.registrationEntryTypeButtonTitle), for: .normal)
-            entryButton.setTitle(ModuleTitles.getModuleTitle(.authEntryButtonTitle), for: .normal)
+            loginLabel.text = AuthTitles.getModuleTitle(.authTitle)
+            entryTypeButton.setTitle(AuthTitles.getModuleTitle(.registrationEntryTypeButtonTitle), for: .normal)
+            entryButton.setTitle(AuthTitles.getModuleTitle(.authEntryButtonTitle), for: .normal)
             nicknameTextfield.isHidden = true
             passwordTextField.snp.removeConstraints()
             passwordTextField.snp.makeConstraints {
@@ -108,24 +106,21 @@ extension AuthViewController {
             }
             
         case .registration:
-            loginLabel.text = ModuleTitles.getModuleTitle(.registrationTitle)
-            entryTypeButton.setTitle(ModuleTitles.getModuleTitle(.authEntryTypeButtonTitle), for: .normal)
-            entryButton.setTitle(ModuleTitles.getModuleTitle(.registrationEntryButtonTitle), for: .normal)
+            loginLabel.text = AuthTitles.getModuleTitle(.registrationTitle)
+            entryTypeButton.setTitle(AuthTitles.getModuleTitle(.authEntryTypeButtonTitle), for: .normal)
+            entryButton.setTitle(AuthTitles.getModuleTitle(.registrationEntryButtonTitle), for: .normal)
             nicknameTextfield.isHidden = false
             passwordTextField.snp.removeConstraints()
             passwordTextField.snp.makeConstraints {
                 $0.top.equalTo(nicknameTextfield).inset(40)
                 $0.left.right.equalToSuperview().inset(50)
             }
-            
         default:
             break
-            
         }
     }
     
     private func setupViews() {
-        view.backgroundColor = .systemBlue
         view.addSubview(backgroundImageView)
         view.addSubview(loginLabel)
         view.addSubview(emailTextField)
@@ -136,7 +131,6 @@ extension AuthViewController {
     }
     
     private func setupConstraints() {
-        
         backgroundImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -196,7 +190,7 @@ extension AuthViewController {
 
 extension AuthViewController {
     private func showMainScreen() {
-        let mainViewController = MainViewController()
+        let mainViewController = ModuleBuilder.assemblyMainViewController()
         UIView.transition(with: UIWindow.key, duration: 0.7, options: .curveEaseIn) {
             UIWindow.key.rootViewController = mainViewController
         }

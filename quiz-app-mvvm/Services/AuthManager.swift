@@ -16,6 +16,10 @@ final class AuthManager {
     }
     
     func logout() {
-        
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
