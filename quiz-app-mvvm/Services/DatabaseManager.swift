@@ -3,7 +3,9 @@ import FirebaseDatabase
 
 final class DatabaseManager {
     private let database = Database.database().reference()
-    
+}
+
+extension DatabaseManager {
     func insertUser(with user: QuizAppUser) {
         var safeEmail = user.email ?? ""
         safeEmail = safeEmail.replacingOccurrences(of: ".", with: "-")
@@ -17,7 +19,7 @@ final class DatabaseManager {
     }
     
     func nicknameUsed(nickname: String, completion: @escaping (Int) -> Void) {
-        var nicknameCount = 0
+        var nicknameCount: Int = .zero
         
         database.child("users").observeSingleEvent(of: .value) { snapshot in
             
