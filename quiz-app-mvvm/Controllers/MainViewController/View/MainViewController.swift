@@ -3,7 +3,7 @@ import SnapKit
 
 final class MainViewController: UIViewController {
     
-    var viewModel: MainViewModel? 
+    var viewModel: MainViewModel?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -32,6 +32,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.zeroView.value.show()
         setupViews()
         setupConstraints()
         bind()
@@ -44,11 +45,14 @@ extension MainViewController {
             self.viewModel?.categories.value = self.viewModel?.questionProvider.fetchAllCategories() ?? [Category(name: "")]
             self.viewModel?.gameModes.value = self.viewModel?.questionProvider.fetchAllGameModes() ?? [GameMode(name: "")]
             self.tableView.reloadData()
+            self.navigationController?.isNavigationBarHidden = false
+            self.viewModel?.zeroView.value.hide()
         }
     }
     
     private func setupViews() {
         view.addSubview(tableView)
+        view.addSubview(viewModel?.zeroView.value ?? UIView())
         navigationItem.leftBarButtonItem = logoutBarButton
         navigationItem.rightBarButtonItem = slideMenuBarButton
         navigationController?.isNavigationBarHidden = true
@@ -58,6 +62,9 @@ extension MainViewController {
     private func setupConstraints() {
         tableView.snp.makeConstraints {
             $0.edges.topMargin.equalToSuperview()
+        }
+        viewModel?.zeroView.value.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
 }
@@ -77,9 +84,8 @@ extension MainViewController {
             //            UserDefaults.standard.removeObject(forKey: "Score")
             
             UIView.transition(with: UIWindow.key, duration: 0.5, options: .curveEaseOut) {
-                UIWindow.key.rootViewController = AuthViewController()
+                UIWindow.key.rootViewController = ModuleBuilder.assemblyAuthViewController()
             }
-            
         }
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)

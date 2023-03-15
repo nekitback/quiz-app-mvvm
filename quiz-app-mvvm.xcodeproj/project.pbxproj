@@ -27,6 +27,10 @@
 		8844D1B9297FF554004CD130 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D1B8297FF554004CD130 /* Category.swift */; };
 		8844D1BC297FF5E6004CD130 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844D1BB297FF5E6004CD130 /* GameMode.swift */; };
 		8854FB822981588A00F52D08 /* UIScreen+sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FB812981588A00F52D08 /* UIScreen+sizes.swift */; };
+		885A4E8429C058660016DEE8 /* hourglass.json in Resources */ = {isa = PBXBuildFile; fileRef = 885A4E8329C058660016DEE8 /* hourglass.json */; };
+		885A4E8729C059580016DEE8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 885A4E8629C059580016DEE8 /* Lottie */; };
+		885A4E8929C05CE10016DEE8 /* ZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A4E8829C05CE10016DEE8 /* ZeroView.swift */; };
+		885A4E8B29C05E1C0016DEE8 /* UIView+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A4E8A29C05E1C0016DEE8 /* UIView+hide.swift */; };
 		886A0C22297D5C23000EEDE9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A0C21297D5C23000EEDE9 /* DatabaseManager.swift */; };
 		886A0C25297D5F30000EEDE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A0C24297D5F30000EEDE9 /* User.swift */; };
 		886A0C27297D62D1000EEDE9 /* DataSnapshot+data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A0C26297D62D1000EEDE9 /* DataSnapshot+data.swift */; };
@@ -75,6 +79,9 @@
 		8844D1B8297FF554004CD130 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8844D1BB297FF5E6004CD130 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		8854FB812981588A00F52D08 /* UIScreen+sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+sizes.swift"; sourceTree = "<group>"; };
+		885A4E8329C058660016DEE8 /* hourglass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hourglass.json; sourceTree = "<group>"; };
+		885A4E8829C05CE10016DEE8 /* ZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroView.swift; sourceTree = "<group>"; };
+		885A4E8A29C05E1C0016DEE8 /* UIView+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+hide.swift"; sourceTree = "<group>"; };
 		886A0C21297D5C23000EEDE9 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		886A0C24297D5F30000EEDE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		886A0C26297D62D1000EEDE9 /* DataSnapshot+data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSnapshot+data.swift"; sourceTree = "<group>"; };
@@ -105,6 +112,7 @@
 				887547932977F4C000B1CEA6 /* FirebaseStorage in Frameworks */,
 				887547872977F4C000B1CEA6 /* FirebaseAnalyticsSwift in Frameworks */,
 				887547852977F4C000B1CEA6 /* FirebaseAnalytics in Frameworks */,
+				885A4E8729C059580016DEE8 /* Lottie in Frameworks */,
 				8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */,
 				887547892977F4C000B1CEA6 /* FirebaseAuth in Frameworks */,
 				8875478F2977F4C000B1CEA6 /* FirebaseFirestore in Frameworks */,
@@ -166,6 +174,7 @@
 		88000D452969717500CA35EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				885A4E8229C058250016DEE8 /* Animations */,
 				88000D382969556000CA35EB /* Assets.xcassets */,
 				88000D3A2969556000CA35EB /* LaunchScreen.storyboard */,
 				88000D3D2969556000CA35EB /* Info.plist */,
@@ -259,6 +268,14 @@
 			path = GameMode;
 			sourceTree = "<group>";
 		};
+		885A4E8229C058250016DEE8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				885A4E8329C058660016DEE8 /* hourglass.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		886A0C23297D5F23000EEDE9 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +326,7 @@
 				886A0C21297D5C23000EEDE9 /* DatabaseManager.swift */,
 				8837E19C297FC0B800A5A314 /* Session.swift */,
 				886F2B162986D7F800D52C87 /* QuestionsProvider.swift */,
+				885A4E8829C05CE10016DEE8 /* ZeroView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -319,6 +337,7 @@
 				888A415E297D277200579E36 /* UIWindow+key.swift */,
 				886A0C26297D62D1000EEDE9 /* DataSnapshot+data.swift */,
 				8854FB812981588A00F52D08 /* UIScreen+sizes.swift */,
+				885A4E8A29C05E1C0016DEE8 /* UIView+hide.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,6 +492,7 @@
 				887547902977F4C000B1CEA6 /* FirebaseFirestoreSwift */,
 				887547922977F4C000B1CEA6 /* FirebaseStorage */,
 				8837E19F297FC14600A5A314 /* SwiftKeychainWrapper */,
+				885A4E8629C059580016DEE8 /* Lottie */,
 			);
 			productName = "quiz-app-mvvm";
 			productReference = 88000D2C2969555F00CA35EB /* quiz-app-mvvm.app */;
@@ -506,6 +526,7 @@
 				8830385C2974030B00FFC6A5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				887547832977F4C000B1CEA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8837E19E297FC14600A5A314 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				885A4E8529C059580016DEE8 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 88000D2D2969555F00CA35EB /* Products */;
 			projectDirPath = "";
@@ -523,6 +544,7 @@
 			files = (
 				88000D3C2969556000CA35EB /* LaunchScreen.storyboard in Resources */,
 				88000D392969556000CA35EB /* Assets.xcassets in Resources */,
+				885A4E8429C058660016DEE8 /* hourglass.json in Resources */,
 				887547822977F34700B1CEA6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +562,7 @@
 				888A415F297D277200579E36 /* UIWindow+key.swift in Sources */,
 				88FF06C529740AC1005608A2 /* AuthViewConstants.swift in Sources */,
 				886A0C27297D62D1000EEDE9 /* DataSnapshot+data.swift in Sources */,
+				885A4E8929C05CE10016DEE8 /* ZeroView.swift in Sources */,
 				8844D1B6297FF293004CD130 /* StartGameButtonCell.swift in Sources */,
 				88FF06C3297405E7005608A2 /* AuthType.swift in Sources */,
 				8844D1B0297FF25B004CD130 /* GameModeCollectionCell.swift in Sources */,
@@ -553,6 +576,7 @@
 				88FF06C829740B6E005608A2 /* AuthTitles.swift in Sources */,
 				88000D302969555F00CA35EB /* AppDelegate.swift in Sources */,
 				8844D1BC297FF5E6004CD130 /* GameMode.swift in Sources */,
+				885A4E8B29C05E1C0016DEE8 /* UIView+hide.swift in Sources */,
 				88FF06D129741A8C005608A2 /* MainViewController.swift in Sources */,
 				882C5E0529BF047A0048E7FF /* GameViewModel.swift in Sources */,
 				886A0C22297D5C23000EEDE9 /* DatabaseManager.swift in Sources */,
@@ -791,6 +815,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		885A4E8529C059580016DEE8 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		887547832977F4C000B1CEA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -811,6 +843,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8837E19E297FC14600A5A314 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
+		};
+		885A4E8629C059580016DEE8 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 885A4E8529C059580016DEE8 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		887547842977F4C000B1CEA6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
