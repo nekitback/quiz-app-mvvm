@@ -9,6 +9,7 @@ final class MainViewModel {
     var currentCategory = Bindable<Category>(Category(name: ""))
     var currentGameMode = Bindable<GameMode>(GameMode(name: ""))
     var categorySections = Bindable<[CategorySectionType]>(CategorySectionType.allCases)
+    var zeroView = Bindable<ZeroView>(ZeroView.init(jsonName: "hourglass"))
     init(qeustionProvider: QuestionsProvider & QuestionProviderFetchProtocol & QuestionsProviderImpl) {
         self.questionProvider = qeustionProvider
     }

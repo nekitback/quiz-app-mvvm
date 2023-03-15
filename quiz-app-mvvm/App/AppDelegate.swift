@@ -22,6 +22,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configureFirebase() {
         FirebaseApp.configure()
     }
-
 }
 
