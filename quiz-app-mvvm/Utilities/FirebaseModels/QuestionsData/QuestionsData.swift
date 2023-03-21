@@ -6,7 +6,7 @@ struct QuestionsResponse: Codable {
 }
 
 // MARK: - Item
-struct Question: Codable {
+class Question: Codable {
     let id: Int
     let text, image: String?
     let type: String
@@ -15,7 +15,7 @@ struct Question: Codable {
 }
 
 // MARK: - Answer
-struct Answer: Codable {
+class Answer: Codable {
     let id: Int
     let text: String
     let isCorrect: Bool
