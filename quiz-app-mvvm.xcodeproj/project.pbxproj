@@ -13,6 +13,12 @@
 		88000D3C2969556000CA35EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88000D3A2969556000CA35EB /* LaunchScreen.storyboard */; };
 		882C5E0329BF00DF0048E7FF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5E0229BF00DF0048E7FF /* GameViewController.swift */; };
 		882C5E0529BF047A0048E7FF /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5E0429BF047A0048E7FF /* GameViewModel.swift */; };
+		882ECA0929C1BBA40077867C /* QuestionTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ECA0829C1BBA40077867C /* QuestionTextCell.swift */; };
+		882ECA0B29C1BBB20077867C /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ECA0A29C1BBB20077867C /* AnswerCell.swift */; };
+		882ECA0D29C1BBC20077867C /* CheckButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ECA0C29C1BBC20077867C /* CheckButtonCell.swift */; };
+		882ECA0F29C1BBD50077867C /* QuestionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ECA0E29C1BBD50077867C /* QuestionImageCell.swift */; };
+		882ECA1129C1BBEC0077867C /* QuestionNumberHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ECA1029C1BBEC0077867C /* QuestionNumberHeader.swift */; };
+		882ECA1429C1BDE70077867C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 882ECA1329C1BDE70077867C /* SDWebImage */; };
 		8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8830385D2974030B00FFC6A5 /* SnapKit */; };
 		8837E19D297FC0B800A5A314 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837E19C297FC0B800A5A314 /* Session.swift */; };
 		8837E1A0297FC14600A5A314 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 8837E19F297FC14600A5A314 /* SwiftKeychainWrapper */; };
@@ -49,6 +55,10 @@
 		887547932977F4C000B1CEA6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 887547922977F4C000B1CEA6 /* FirebaseStorage */; };
 		887547962977F8F900B1CEA6 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887547952977F8F900B1CEA6 /* AuthManager.swift */; };
 		888A415F297D277200579E36 /* UIWindow+key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A415E297D277200579E36 /* UIWindow+key.swift */; };
+		88B7CE9029C1B9950058E2FB /* QuestionSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7CE8F29C1B9950058E2FB /* QuestionSectionType.swift */; };
+		88B7CE9229C1B9CC0058E2FB /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7CE9129C1B9CC0058E2FB /* QuestionType.swift */; };
+		88E0B1F029C98EA500D8C4B7 /* PersonalScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0B1EF29C98EA500D8C4B7 /* PersonalScoreViewController.swift */; };
+		88E0B1F229C98ED600D8C4B7 /* PersonalScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0B1F129C98ED600D8C4B7 /* PersonalScoreViewModel.swift */; };
 		88FF06BB29740529005608A2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06BA29740529005608A2 /* AuthViewModel.swift */; };
 		88FF06BF2974057C005608A2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06BE2974057C005608A2 /* Bindable.swift */; };
 		88FF06C3297405E7005608A2 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF06C2297405E7005608A2 /* AuthType.swift */; };
@@ -67,6 +77,11 @@
 		88000D3D2969556000CA35EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882C5E0229BF00DF0048E7FF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		882C5E0429BF047A0048E7FF /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		882ECA0829C1BBA40077867C /* QuestionTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTextCell.swift; sourceTree = "<group>"; };
+		882ECA0A29C1BBB20077867C /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		882ECA0C29C1BBC20077867C /* CheckButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButtonCell.swift; sourceTree = "<group>"; };
+		882ECA0E29C1BBD50077867C /* QuestionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionImageCell.swift; sourceTree = "<group>"; };
+		882ECA1029C1BBEC0077867C /* QuestionNumberHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionNumberHeader.swift; sourceTree = "<group>"; };
 		8837E19C297FC0B800A5A314 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		8844D1A5297FEA06004CD130 /* MainViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewConstants.swift; sourceTree = "<group>"; };
 		8844D1A7297FEC3D004CD130 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +107,10 @@
 		887547812977F34700B1CEA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		887547952977F8F900B1CEA6 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		888A415E297D277200579E36 /* UIWindow+key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+key.swift"; sourceTree = "<group>"; };
+		88B7CE8F29C1B9950058E2FB /* QuestionSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSectionType.swift; sourceTree = "<group>"; };
+		88B7CE9129C1B9CC0058E2FB /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
+		88E0B1EF29C98EA500D8C4B7 /* PersonalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalScoreViewController.swift; sourceTree = "<group>"; };
+		88E0B1F129C98ED600D8C4B7 /* PersonalScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalScoreViewModel.swift; sourceTree = "<group>"; };
 		88FF06BA29740529005608A2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		88FF06BE2974057C005608A2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		88FF06C2297405E7005608A2 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
@@ -112,6 +131,7 @@
 				887547932977F4C000B1CEA6 /* FirebaseStorage in Frameworks */,
 				887547872977F4C000B1CEA6 /* FirebaseAnalyticsSwift in Frameworks */,
 				887547852977F4C000B1CEA6 /* FirebaseAnalytics in Frameworks */,
+				882ECA1429C1BDE70077867C /* SDWebImage in Frameworks */,
 				885A4E8729C059580016DEE8 /* Lottie in Frameworks */,
 				8830385E2974030B00FFC6A5 /* SnapKit in Frameworks */,
 				887547892977F4C000B1CEA6 /* FirebaseAuth in Frameworks */,
@@ -167,6 +187,7 @@
 				88FF06B6297404A7005608A2 /* AuthViewController */,
 				88FF06CC29741A3A005608A2 /* MainViewController */,
 				882C5DFC29BF003A0048E7FF /* Game Modes */,
+				88E0B1EB29C98E4300D8C4B7 /* PersonalScore */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +219,7 @@
 				882C5DFF29BF00860048E7FF /* ViewModel */,
 				882C5E0129BF009F0048E7FF /* Cells */,
 				882C5E0029BF00970048E7FF /* Constants */,
+				882ECA0729C1BB770077867C /* Headers */,
 			);
 			path = Standard;
 			sourceTree = "<group>";
@@ -228,14 +250,28 @@
 		882C5E0129BF009F0048E7FF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				882ECA0829C1BBA40077867C /* QuestionTextCell.swift */,
+				882ECA0A29C1BBB20077867C /* AnswerCell.swift */,
+				882ECA0C29C1BBC20077867C /* CheckButtonCell.swift */,
+				882ECA0E29C1BBD50077867C /* QuestionImageCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		882ECA0729C1BB770077867C /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				882ECA1029C1BBEC0077867C /* QuestionNumberHeader.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		8844D1A9297FF01F004CD130 /* CategorySectionType */ = {
 			isa = PBXGroup;
 			children = (
 				8844D1AA297FF044004CD130 /* CategorySectionType.swift */,
+				88B7CE8F29C1B9950058E2FB /* QuestionSectionType.swift */,
+				88B7CE9129C1B9CC0058E2FB /* QuestionType.swift */,
 			);
 			path = CategorySectionType;
 			sourceTree = "<group>";
@@ -340,6 +376,39 @@
 				885A4E8A29C05E1C0016DEE8 /* UIView+hide.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88E0B1EB29C98E4300D8C4B7 /* PersonalScore */ = {
+			isa = PBXGroup;
+			children = (
+				88E0B1EC29C98E7100D8C4B7 /* View */,
+				88E0B1ED29C98E7800D8C4B7 /* ViewModel */,
+				88E0B1EE29C98E8200D8C4B7 /* Cells */,
+			);
+			path = PersonalScore;
+			sourceTree = "<group>";
+		};
+		88E0B1EC29C98E7100D8C4B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88E0B1EF29C98EA500D8C4B7 /* PersonalScoreViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88E0B1ED29C98E7800D8C4B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88E0B1F129C98ED600D8C4B7 /* PersonalScoreViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88E0B1EE29C98E8200D8C4B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		88FF06B6297404A7005608A2 /* AuthViewController */ = {
@@ -493,6 +562,7 @@
 				887547922977F4C000B1CEA6 /* FirebaseStorage */,
 				8837E19F297FC14600A5A314 /* SwiftKeychainWrapper */,
 				885A4E8629C059580016DEE8 /* Lottie */,
+				882ECA1329C1BDE70077867C /* SDWebImage */,
 			);
 			productName = "quiz-app-mvvm";
 			productReference = 88000D2C2969555F00CA35EB /* quiz-app-mvvm.app */;
@@ -527,6 +597,7 @@
 				887547832977F4C000B1CEA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8837E19E297FC14600A5A314 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				885A4E8529C059580016DEE8 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				882ECA1229C1BDE70077867C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 88000D2D2969555F00CA35EB /* Products */;
 			projectDirPath = "";
@@ -559,10 +630,12 @@
 				886A0C25297D5F30000EEDE9 /* User.swift in Sources */,
 				8844D1AB297FF044004CD130 /* CategorySectionType.swift in Sources */,
 				8854FB822981588A00F52D08 /* UIScreen+sizes.swift in Sources */,
+				882ECA1129C1BBEC0077867C /* QuestionNumberHeader.swift in Sources */,
 				888A415F297D277200579E36 /* UIWindow+key.swift in Sources */,
 				88FF06C529740AC1005608A2 /* AuthViewConstants.swift in Sources */,
 				886A0C27297D62D1000EEDE9 /* DataSnapshot+data.swift in Sources */,
 				885A4E8929C05CE10016DEE8 /* ZeroView.swift in Sources */,
+				88B7CE9229C1B9CC0058E2FB /* QuestionType.swift in Sources */,
 				8844D1B6297FF293004CD130 /* StartGameButtonCell.swift in Sources */,
 				88FF06C3297405E7005608A2 /* AuthType.swift in Sources */,
 				8844D1B0297FF25B004CD130 /* GameModeCollectionCell.swift in Sources */,
@@ -576,20 +649,27 @@
 				88FF06C829740B6E005608A2 /* AuthTitles.swift in Sources */,
 				88000D302969555F00CA35EB /* AppDelegate.swift in Sources */,
 				8844D1BC297FF5E6004CD130 /* GameMode.swift in Sources */,
+				882ECA0F29C1BBD50077867C /* QuestionImageCell.swift in Sources */,
 				885A4E8B29C05E1C0016DEE8 /* UIView+hide.swift in Sources */,
 				88FF06D129741A8C005608A2 /* MainViewController.swift in Sources */,
+				88E0B1F029C98EA500D8C4B7 /* PersonalScoreViewController.swift in Sources */,
 				882C5E0529BF047A0048E7FF /* GameViewModel.swift in Sources */,
 				886A0C22297D5C23000EEDE9 /* DatabaseManager.swift in Sources */,
 				886F2B172986D7F800D52C87 /* QuestionsProvider.swift in Sources */,
 				882C5E0329BF00DF0048E7FF /* GameViewController.swift in Sources */,
 				88FF06BF2974057C005608A2 /* Bindable.swift in Sources */,
 				8844D1AE297FF243004CD130 /* GameModeCell.swift in Sources */,
+				882ECA0B29C1BBB20077867C /* AnswerCell.swift in Sources */,
 				8844D1B2297FF26C004CD130 /* CategoryCell.swift in Sources */,
 				886F2B1A2986D86200D52C87 /* QuestionsData.swift in Sources */,
+				882ECA0929C1BBA40077867C /* QuestionTextCell.swift in Sources */,
 				88FF06BB29740529005608A2 /* AuthViewModel.swift in Sources */,
+				882ECA0D29C1BBC20077867C /* CheckButtonCell.swift in Sources */,
 				887547962977F8F900B1CEA6 /* AuthManager.swift in Sources */,
 				8844D1A6297FEA06004CD130 /* MainViewConstants.swift in Sources */,
+				88E0B1F229C98ED600D8C4B7 /* PersonalScoreViewModel.swift in Sources */,
 				8844D1B9297FF554004CD130 /* Category.swift in Sources */,
+				88B7CE9029C1B9950058E2FB /* QuestionSectionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +879,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		882ECA1229C1BDE70077867C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		8830385C2974030B00FFC6A5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -834,6 +922,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		882ECA1329C1BDE70077867C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 882ECA1229C1BDE70077867C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		8830385D2974030B00FFC6A5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8830385C2974030B00FFC6A5 /* XCRemoteSwiftPackageReference "SnapKit" */;

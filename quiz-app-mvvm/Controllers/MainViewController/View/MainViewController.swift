@@ -42,6 +42,7 @@ final class MainViewController: UIViewController {
 extension MainViewController {
     private func bind() {
         viewModel?.questionProvider.fetchAllQuestions {
+            self.viewModel?.questionProvider.shuffleQuestions()
             self.viewModel?.categories.value = self.viewModel?.questionProvider.fetchAllCategories() ?? [Category(name: "")]
             self.viewModel?.gameModes.value = self.viewModel?.questionProvider.fetchAllGameModes() ?? [GameMode(name: "")]
             self.tableView.reloadData()

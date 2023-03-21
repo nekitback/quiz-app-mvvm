@@ -1,7 +1,7 @@
 import Foundation
 
 final class MainViewModel {
-    let questionProvider: QuestionsProvider & QuestionProviderFetchProtocol & QuestionsProviderImpl
+    let questionProvider: QuestionsProvider & QuestionsProviderImpl
     var authManager = Bindable<AuthManager>(AuthManager())
     var session = Bindable<Session>(Session())
     var categories = Bindable<[Category]>([])
@@ -10,8 +10,8 @@ final class MainViewModel {
     var currentGameMode = Bindable<GameMode>(GameMode(name: ""))
     var categorySections = Bindable<[CategorySectionType]>(CategorySectionType.allCases)
     var zeroView = Bindable<ZeroView>(ZeroView.init(jsonName: "hourglass"))
-    init(qeustionProvider: QuestionsProvider & QuestionProviderFetchProtocol & QuestionsProviderImpl) {
-        self.questionProvider = qeustionProvider
+    init(questionProvider: QuestionsProvider & QuestionsProviderImpl) {
+        self.questionProvider = questionProvider
     }
 }
 
